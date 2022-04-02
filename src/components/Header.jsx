@@ -89,7 +89,7 @@ const Header = () => {
       {/* hero section  */}
       <section className="px-20 py-8 ">
         <ReUseableSection
-          color="#d4e9e2"
+          color="bg-gray-300"
           img="/cup.png"
           title="STARBUCKS FOR LIFE"
           paragraph="It's the most festive game of the year, with chances to win free coffee and more."

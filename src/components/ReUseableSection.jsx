@@ -1,11 +1,14 @@
 import React from "react";
 
 const ReUseableSection = (props) => {
-  let { color, img, title, paragraph, button } = props;
-  console.log(color);
+  let { color, img, title, paragraph, button, order } = props;
   return (
-    <div className={` bg-[${color}] grid grid-cols-1  lg:grid-cols-2  py-8`}>
-      <div className=" flex justify-center items-center flex-col order-5">
+    <div className={`${color} grid grid-cols-1 lg:grid-cols-2  py-8`}>
+      <div
+        className={` flex justify-center items-center flex-col ${
+          order ? "order-1" : "order-10"
+        } `}
+      >
         <h1 className="tracking-[.4rem] text-[2.2rem] leading-[3.2rem] mb-4 md:text-[3.2rem] max-w-lg text-center font-bold text-[#1e3932] ">
           {title}
         </h1>
@@ -19,7 +22,7 @@ const ReUseableSection = (props) => {
           {button}{" "}
         </a>
       </div>
-      <div className="order-1">
+      <div className={`${order ? "order-10" : "order-1"}`}>
         <img src={img} alt="#" />
       </div>
     </div>
